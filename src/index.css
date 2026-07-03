@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.nav-link {
+  @apply text-xs font-medium tracking-widest uppercase text-white/70 hover:text-white transition-colors duration-200;
+}
+
+.section-label {
+  @apply text-xs font-semibold tracking-[0.2em] uppercase text-[#C8A96E] mb-4;
+}
+
+.ticker-item {
+  animation: ticker 20s linear infinite;
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
